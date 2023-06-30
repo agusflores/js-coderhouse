@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: url("../img/space-img.jpg");
+  background-image: url("../img/space.jpg");
 }
 
 header {
@@ -21,34 +21,67 @@ header {
 }
 
 main {
-    margin-top: 5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .main-container {
-    height: 500px;
-    width: 700px;
-    background-color: rgb(24, 16, 64);
-    border-radius: 18px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  width: 700px;
+  background-color: rgb(24, 16, 64);
+  border-radius: 18px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-container-header {
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.main-container-body {
+  color: white;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.main-container-body-questions {
+  margin: 5px;
+}
+
+.checkbox-container {
+  margin-top: 10px;
+}
+
+.btn-results {
+  margin-top: 1rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn-results button {
+  color: rgb(24, 16, 64);
+  padding: 10px;
+  border-radius: 18px;
+  font-size: 16px;
+}
+
+.btn-results :hover {
+  background-color: rgb(24, 16, 64);
+  color: white;
+  transition: 0.1s;
 }
 
 .img-principal {
   width: 500px;
   height: 500px;
-}
-
-footer {
-  height: 100px;
-  width: 100%;
-  position: fixed;
-  bottom: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .navegador,
@@ -103,14 +136,3 @@ footer {
   width: 300px;
   padding: 10px;
 }
-
-/* .footer-container {
-  color: lightgreen;
-  text-align: center;
-}
-
-.footer-container h3 {
-  margin-bottom: 1rem;
-  border-bottom: 1px solid white;
-  padding: 10px 20px;
-} */

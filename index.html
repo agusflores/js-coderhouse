@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@100;200;400&family=Roboto:wght@100;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/png" href="img/rick-logo.png" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Rick y Morty App</title>
   </head>
@@ -14,7 +19,7 @@
           <li><a href="">Characters</a></li>
         </ul>
       </nav>
-      <div class="logo-nav"><img src="img/logo-rick.png" alt="" /></div>
+      <div class="logo-nav"><img src="img/logo.png" alt="" /></div>
       <div class="search">
         <input type="text" placeholder="Buscar un personaje..." />
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -22,16 +27,76 @@
     </header>
     <main>
       <div class="main-container">
-        
+        <div class="main-container-header">
+          <h1>Bienvenido a Rick y Morty App</h1>
+          <small
+            >Averiguá con este mini cuestionario cuanto sabes sobre la
+            serie</small
+          >
+        </div>
+        <div class="main-container-body">
+          <div class="main-container-body-questions">
+            <h3>Pregunta 1</h3>
+            <p>La dimensión de origen de Rick y Morty se llama C-137.</p>
+            <div class="checkbox-container">
+              <input type="checkbox" id="checkbox1" />
+              <label for="checkbox1">Verdadero</label>
+              <input type="checkbox" id="checkbox2" />
+              <label for="checkbox2">Falso</label>
+            </div>
+          </div>
+          <div class="main-container-body-questions">
+            <h3>Pregunta 2</h3>
+            <p>Jerry es un científico brillante como Rick.</p>
+            <div class="checkbox-container">
+              <input type="checkbox" id="checkbox1" />
+              <label for="checkbox1">Verdadero</label>
+              <input type="checkbox" id="checkbox2" />
+              <label for="checkbox2">Falso</label>
+            </div>
+          </div>
+          <div class="main-container-body-questions">
+            <h3>Pregunta 3</h3>
+            <p>
+              Morty es el nieto de Rick y lo acompaña en sus aventuras
+              interdimensionales.
+            </p>
+            <div class="checkbox-container">
+              <input type="checkbox" id="checkbox1" />
+              <label for="checkbox1">Verdadero</label>
+              <input type="checkbox" id="checkbox2" />
+              <label for="checkbox2">Falso</label>
+            </div>
+          </div>
+          <div class="main-container-body-questions">
+            <h3>Pregunta 4</h3>
+            <p>El personaje de Summer es la hermana menor de Morty.</p>
+            <div class="checkbox-container">
+              <input type="checkbox" id="checkbox1" />
+              <label for="checkbox1">Verdadero</label>
+              <input type="checkbox" id="checkbox2" />
+              <label for="checkbox2">Falso</label>
+            </div>
+          </div>
+          <div class="main-container-body-questions">
+            <h3>Pregunta 5</h3>
+            <p>La serie se desarrolla únicamente en la Tierra.</p>
+            <div class="checkbox-container">
+              <input type="checkbox" id="checkbox1" />
+              <label for="checkbox1">Verdadero</label>
+              <input type="checkbox" id="checkbox2" />
+              <label for="checkbox2">Falso</label>
+            </div>
+          </div>
+          <div class="btn-results">
+            <button type="button">Ver resultados</button>
+          </div>
+        </div>
       </div>
       <img class="img-principal" src="img/imagen-principal.png" alt="" />
     </main>
 
     <footer>
-      <!-- <div class="footer-container">
-        <h3>Rick And Morty App</h3>
-        <small>&copy; 2023 - Todos los derechos reservados</small>
-      </div> -->
     </footer>
     <script src="/index.js"></script>
     <script
