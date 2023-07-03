@@ -48,7 +48,7 @@ main {
   margin-top: 1rem;
 }
 
-.main-container-header h1 small {
+.main-container-header h1 span {
   color: turquoise;
   font-size: 36px;
   font-style: italic;
