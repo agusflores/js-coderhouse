@@ -1,7 +1,9 @@
 # Proyecto Final JavaScript Coderhouse
 
 ### 👉 Content
->En proceso.
+> Se creo una landing page interactiva con tematica de Rick y Morty.
+> 
+>En proceso...
 
 ### 🛠 Built With
 
