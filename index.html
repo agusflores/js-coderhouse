@@ -7,113 +7,166 @@
       href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@100;200;400&family=Roboto:wght@100;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@100;200;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@100;200;400&family=Roboto:wght@100;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
     <link rel="shortcut icon" type="image/png" href="img/rick-logo.png" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Rick y Morty App</title>
   </head>
   <body>
     <header>
-      <nav class="navegador">
-        <ul>
-          <li><a href="#characters">Personajes</a></li>
-          <li><a href="#episodes">Episodios</a></li>
-        </ul>
-      </nav>
-      <div class="logo-nav"><img src="img/logo.png" alt="" /></div>
-      <div class="search">
-        <input type="text" placeholder="Buscar un personaje..." />
-        <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-      </div>
-    </header>
-    <main>
-      <div class="main-container">
-        <div class="main-container-header">
-          <h1>Bienvenido a <span>Rick y Morty App</span></h1>
-          <small
-            >Averiguá con este mini cuestionario cuanto sabes sobre la
-            serie</small
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid header-nav">
+          <div class="logo-nav navbar-brand">
+            <img src="img/logo.png" alt="" />
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse navegador" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a aria-current="page" href="#characters">Personajes</a>
+              </li>
+              <li class="nav-item">
+                <a href="#episodes">Episodios</a>
+              </li>
+              <li class="nav-item">
+                <a href="#">Ubicaciones</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="main-container-body">
-          <div class="main-container-body-questions">
-            <h3>Pregunta 1</h3>
-            <p>La dimensión de origen de Rick y Morty se llama C-137.</p>
-            <div class="checkbox-container">
-              <input type="checkbox" id="checkbox1" />
-              <label for="checkbox1">Verdadero</label>
-              <input type="checkbox" id="checkbox2" />
-              <label for="checkbox2">Falso</label>
-            </div>
+      </nav>
+    </header>
+    <div class="main-container">
+      <div class="main-container-left-side">
+        <div class="main-title-container">
+          <h1 class="main-title">RICK AND MORTY</h1>
+        </div>
+        <div class="search">
+          <div class="search-input">
+            <input type="text" placeholder="Search..." />
           </div>
-          <div class="main-container-body-questions">
-            <h3>Pregunta 2</h3>
-            <p>Jerry es un científico brillante como Rick.</p>
-            <div class="checkbox-container">
-              <input type="checkbox" id="checkbox1" />
-              <label for="checkbox1">Verdadero</label>
-              <input type="checkbox" id="checkbox2" />
-              <label for="checkbox2">Falso</label>
-            </div>
+          <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
           </div>
-          <div class="main-container-body-questions">
-            <h3>Pregunta 3</h3>
-            <p>
-              Morty es el nieto de Rick y lo acompaña en sus aventuras
-              interdimensionales.
-            </p>
-            <div class="checkbox-container">
-              <input type="checkbox" id="checkbox1" />
-              <label for="checkbox1">Verdadero</label>
-              <input type="checkbox" id="checkbox2" />
-              <label for="checkbox2">Falso</label>
+        </div>
+        <div class="info-and-img">
+          <div class="info-and-img-left">
+            <div>
+              <h1>+825</h1>
+              <h2>CHARACTERS</h2>
             </div>
+            <small
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+              labore!</small
+            >
           </div>
-          <div class="main-container-body-questions">
-            <h3>Pregunta 4</h3>
-            <p>El personaje de Summer es la hermana menor de Morty.</p>
-            <div class="checkbox-container">
-              <input type="checkbox" id="checkbox1" />
-              <label for="checkbox1">Verdadero</label>
-              <input type="checkbox" id="checkbox2" />
-              <label for="checkbox2">Falso</label>
-            </div>
-          </div>
-          <div class="main-container-body-questions">
-            <h3>Pregunta 5</h3>
-            <p>La serie se desarrolla únicamente en la Tierra.</p>
-            <div class="checkbox-container">
-              <input type="checkbox" id="checkbox1" />
-              <label for="checkbox1">Verdadero</label>
-              <input type="checkbox" id="checkbox2" />
-              <label for="checkbox2">Falso</label>
-            </div>
-          </div>
-          <div class="btn-results">
-            <button type="button">Ver resultados</button>
+          <div class="info-and-img-right">
+            <img src="/img/img-rick-y-morty-sentados-sillon.png" alt="" />
           </div>
         </div>
       </div>
-      <img class="img-principal" src="img/imagen-principal.png" alt="" />
-    </main>
-    <section id="characters">
-      <div class="character-container">
-        <div class="character-container-header">
-          <h1>Personajes</h1>
+      <div class="main-container-right-side">
+        <div class="main-container">
+          <div class="main-container-header">
+            <h1>Bienvenido a <span>Rick y Morty App</span></h1>
+            <small
+              >Averiguá con este mini cuestionario cuanto sabes sobre la
+              serie</small
+            >
+          </div>
+          <div class="main-container-body">
+            <div class="main-container-body-questions">
+              <h3>Pregunta 1</h3>
+              <p>La dimensión de origen de Rick y Morty se llama C-137.</p>
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox1" />
+                <label for="checkbox1">Verdadero</label>
+                <input type="checkbox" id="checkbox2" />
+                <label for="checkbox2">Falso</label>
+              </div>
+            </div>
+            <div class="main-container-body-questions">
+              <h3>Pregunta 2</h3>
+              <p>Jerry es un científico brillante como Rick.</p>
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox1" />
+                <label for="checkbox1">Verdadero</label>
+                <input type="checkbox" id="checkbox2" />
+                <label for="checkbox2">Falso</label>
+              </div>
+            </div>
+            <div class="main-container-body-questions">
+              <h3>Pregunta 3</h3>
+              <p>
+                Morty es el nieto de Rick y lo acompaña en sus aventuras
+                interdimensionales.
+              </p>
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox1" />
+                <label for="checkbox1">Verdadero</label>
+                <input type="checkbox" id="checkbox2" />
+                <label for="checkbox2">Falso</label>
+              </div>
+            </div>
+            <div class="main-container-body-questions">
+              <h3>Pregunta 4</h3>
+              <p>El personaje de Summer es la hermana menor de Morty.</p>
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox1" />
+                <label for="checkbox1">Verdadero</label>
+                <input type="checkbox" id="checkbox2" />
+                <label for="checkbox2">Falso</label>
+              </div>
+            </div>
+            <div class="main-container-body-questions">
+              <h3>Pregunta 5</h3>
+              <p>La serie se desarrolla únicamente en la Tierra.</p>
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox1" />
+                <label for="checkbox1">Verdadero</label>
+                <input type="checkbox" id="checkbox2" />
+                <label for="checkbox2">Falso</label>
+              </div>
+            </div>
+            <div class="btn-results">
+              <button type="button">Ver resultados</button>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-    <section id="episodes">
-      <div class="episodes-container">
-        <div class="episodes-container-header">
-          <h1>Episodios</h1>
-        </div>
-      </div>
-    </section>
-    <footer>
-    </footer>
+    </div>
     <script src="/index.js"></script>
     <script
       src="https://kit.fontawesome.com/5b5f6e35f5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
   </body>
