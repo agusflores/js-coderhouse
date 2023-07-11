@@ -18,7 +18,7 @@
 ``` mermaid
 timeline
     title JavaScript Coderhouse
-    Primera entrega 06/07/2023 : Otro : Otro
+    Primera entrega 06/07/2023 : Algoritmo con condicional : Algoritmo con bucle
     Segunda entrega 25/07/2023 : Otro : Otro 
     Tercera entrega 08/08/2023 : Otro : Otro
     Entrega final 22/08/2023   : Otro : Otro
