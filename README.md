@@ -1,7 +1,9 @@
 # Proyecto Final JavaScript Coderhouse
 
 ### 👉 Content
-> Se creo una landing page interactiva con tematica de Rick y Morty.
+> Se creo una pagina interactiva con tematica de Rick y Morty.
+> 
+> Esta consta en consumir una API publica sobre la serie mencionada 
 > 
 >En proceso...
 
@@ -19,7 +21,7 @@
 timeline
     title JavaScript Coderhouse
     Primera entrega 06/07/2023 : Algoritmo con condicional : Algoritmo con bucle : Simulador interactivo
-    Segunda entrega 25/07/2023 : Otro : Otro 
+    Segunda entrega 25/07/2023 : Objetos : Arrays : Metodos de busqueda y filtrado 
     Tercera entrega 08/08/2023 : Otro : Otro
     Entrega final 22/08/2023   : Otro : Otro
 ```
