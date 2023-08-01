@@ -1,3 +1,5 @@
+/* Clase Personaje que contiene las propiedades de los mismos */
+
 class Personaje {
   constructor(id, name, status, species, gender, origin, location, image) {
     this.id = id;
@@ -14,6 +16,8 @@ class Personaje {
 Personaje.prototype.toString = function () {
   return `Nombre: ${this.name}, Estado: ${this.status}, Especie: ${this.species}, Genero: ${this.gender}, Origen: ${this.origin}`;
 };
+
+/* Mock de personajes principales de la serie */
 
 const rick = new Personaje(
   1,
@@ -72,6 +76,21 @@ const jerry = new Personaje(
 
 const personajes = [rick, morty, summer, beth, jerry];
 
+/* Funcion para obtener personajes filtrados por genero. En la ultima linea del codigo hay un ejemplo que se muestra por consola */
+
+const GENERO_FEMENINO = "Female";
+const GENERO_MASCULINO = "Male";
+
+const obtenerPersonajesFiltradosPorGenero = (personajes, generoAObtener) => {
+  const personajesFiltrados = [];
+  for (let i = 0; i < personajes.length; i++) {
+    if (personajes[i].gender.toLowerCase() == generoAObtener.toLowerCase()) {
+      personajesFiltrados.push(personajes[i].name);
+    }
+  }
+  return personajesFiltrados;
+};
+
 /* Funcion para buscar personaje pasandole por parametro el nombre del personaje a buscar */
 
 const buscarPersonaje = (nombrePersonaje) => {
@@ -100,3 +119,6 @@ const personaje = buscarPersonaje(nombreABuscar);
 if (!personaje) {
   alert("No se encontro el personaje entre los personajes principales.");
 }
+
+console.log(obtenerPersonajesFiltradosPorGenero(personajes, GENERO_FEMENINO));
+console.log(obtenerPersonajesFiltradosPorGenero(personajes, GENERO_MASCULINO));
