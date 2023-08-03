@@ -157,5 +157,10 @@ p {
 
   .search-nav {
     width: 100%;
+    justify-content: space-between;
+  }
+
+  .search-input {
+    flex-grow: 1;
   }
 }
