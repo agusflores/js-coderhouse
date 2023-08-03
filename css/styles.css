@@ -142,12 +142,13 @@ p {
   .contenedor-principal-ls {
     width: fit-content;
   }
+}
 
+@media screen and (max-width: 1300px) {
   .contenedor-principal-rs {
     display: none;
   }
 }
-
 @media screen and (max-width: 780px) {
   header {
     flex-direction: column;
@@ -156,6 +157,7 @@ p {
   }
 
   .search-nav {
+    margin: 1rem;
     width: 100%;
     justify-content: space-between;
   }
