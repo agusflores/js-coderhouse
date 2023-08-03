@@ -39,9 +39,9 @@ header {
 }
 
 input {
-  width: 250px;
+  width: 100%;
   font-size: 20px;
-  padding: 0 5px;
+  padding: 0 10px;
   border-radius: 18px;
 }
 
@@ -62,16 +62,21 @@ input:focus {
   margin-right: 1rem;
 }
 
+.search-icon :hover {
+  transform: translateY(-1px);
+  transition: transform 0.1s ease;
+}
+
 .contenedor-principal {
   margin: 1rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 700px;
+  height: fit-content;
 }
 
 .contenedor-principal-ls {
-  height: 600px;
+  height: fit-content;
   padding: 30px;
   margin-top: 1rem;
   width: 60%;
@@ -125,4 +130,32 @@ p {
   background-color: white;
   color: black;
   border-radius: 18px;
+}
+
+@media screen and (max-width: 1550px) {
+  .contenedor-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contenedor-principal-ls {
+    width: fit-content;
+  }
+
+  .contenedor-principal-rs {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  header {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .search-nav {
+    width: 100%;
+  }
 }
