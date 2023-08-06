@@ -126,5 +126,5 @@ const personajesMasculinos = obtenerPersonajesFiltradosPorGenero(
   GENERO_MASCULINO
 );
 
-alert(`Los personajes femeninos son: ${personajesFemeninos}`);
-alert(`Los personajes masculinos son: ${personajesMasculinos}`);
+alert(`Los personajes femeninos son: ${personajesFemeninos}.`);
+alert(`Los personajes masculinos son: ${personajesMasculinos}.`);
