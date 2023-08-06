@@ -82,32 +82,27 @@ const GENERO_FEMENINO = "Female";
 const GENERO_MASCULINO = "Male";
 
 const obtenerPersonajesFiltradosPorGenero = (personajes, generoAObtener) => {
-  const personajesFiltrados = [];
-  for (let i = 0; i < personajes.length; i++) {
-    if (personajes[i].gender.toLowerCase() == generoAObtener.toLowerCase()) {
-      personajesFiltrados.push(personajes[i].name);
-    }
-  }
-  return personajesFiltrados;
+  return personajes
+    .filter(
+      (personaje) =>
+        personaje.gender.toLowerCase() == generoAObtener.toLowerCase()
+    )
+    .map((p) => p.name);
 };
 
 /* Funcion para buscar personaje pasandole por parametro el nombre del personaje a buscar */
 
 const buscarPersonaje = (nombrePersonaje) => {
-  for (let i = 0; i < personajes.length; i++) {
-    if (nombrePersonaje.toLowerCase() == personajes[i].name.toLowerCase()) {
-      alert(
-        `Personaje encontrado.\nInformacion del personaje:\n${personajes[i]}`
-      );
-      return personajes[i];
-    }
-  }
+  return personajes.find(
+    (personaje) => personaje.name.toLowerCase() == nombrePersonaje.toLowerCase()
+  );
 };
-
 /* Guardo el nombre cargado en una variable */
 
 let nombreABuscar = prompt(
-  "Bienvenido a Rick y Morty App. Ingrese el nombre de uno de los personajes pricipales: "
+  `Bienvenido a Rick y Morty App. Los personajes principales son ${personajes.map(
+    (p) => p.name
+  )}.\nPara ver informacion detallada de cada uno ingrese su nombre: `
 );
 
 /* Le asigno el valor a una variable  */
@@ -116,9 +111,20 @@ const personaje = buscarPersonaje(nombreABuscar);
 
 /* En caso de que no se retorne nada quiere decir que el personaje no fue encontrado */
 
-if (!personaje) {
-  alert("No se encontro el personaje entre los personajes principales.");
-}
+personaje === undefined
+  ? alert("No se encontro el personaje entre los personajes principales.")
+  : alert(
+      `El personaje existe y aqui esta su informacion principal.\n ${personaje}`
+    );
 
-console.log(obtenerPersonajesFiltradosPorGenero(personajes, GENERO_FEMENINO));
-console.log(obtenerPersonajesFiltradosPorGenero(personajes, GENERO_MASCULINO));
+const personajesFemeninos = obtenerPersonajesFiltradosPorGenero(
+  personajes,
+  GENERO_FEMENINO
+);
+const personajesMasculinos = obtenerPersonajesFiltradosPorGenero(
+  personajes,
+  GENERO_MASCULINO
+);
+
+alert(`Los personajes femeninos son: ${personajesFemeninos}`);
+alert(`Los personajes masculinos son: ${personajesMasculinos}`);
