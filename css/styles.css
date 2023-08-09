@@ -60,6 +60,7 @@ input:focus {
   color: #fdfeff;
   border-radius: 38px;
   margin-right: 1rem;
+  cursor: pointer;
 }
 
 .search-icon :hover {
