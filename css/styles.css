@@ -202,6 +202,29 @@ p {
   }
 
   .contenedor-principal {
+    margin-top: 1rem;
+  }
+
+  .contenedor-principal-ls {
+    width: 100%;
+    gap: 3rem;
+  }
+
+  .main-title {
+    font-size: 48px;
+  }
+
+  .contenedor-principal-ls p {
+    font-size: 20px;
+    height: 400px;
+    overflow-y: scroll;
+  }
+
+  .buttons {
+    gap: 0;
+  }
+
+  .contenedor-principal {
     margin: 1rem;
   }
 
