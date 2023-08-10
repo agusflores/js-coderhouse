@@ -18,6 +18,50 @@ body {
   overflow-x: hidden;
 }
 
+.show {
+  opacity: 1 !important;
+}
+
+.modal-container {
+  position: fixed;
+  top: 6rem;
+  right: 1rem;
+  padding: 10px;
+  border-radius: 8px;
+  opacity: 0;
+  width: 400px;
+}
+
+#boton-cierre-modal {
+  cursor: pointer;
+  padding: 3px 5px;
+  color: #fdfeff;
+}
+
+#boton-cierre-modal :hover {
+  transform: translateY(-1px);
+  transition: transform 0.1s ease;
+  color: black;
+}
+
+.modal-header h3 {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+}
+
+.modal-container p {
+  font-size: 14px;
+}
+
+.error {
+  background-color: rgb(210, 70, 70);
+}
+
+.success {
+  background-color: rgb(70, 210, 70);
+}
+
 header {
   height: 100px;
   width: 100%;
@@ -69,7 +113,7 @@ input:focus {
 }
 
 .contenedor-principal {
-  margin: 1rem;
+  margin: 3rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -165,5 +209,10 @@ p {
 
   .search-input {
     flex-grow: 1;
+  }
+
+  .modal-container {
+    width: 400px;
+    top: 2rem;
   }
 }

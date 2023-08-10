@@ -32,17 +32,31 @@
       <div class="search-nav">
         <div class="search-input">
           <input
+            list="options-characters"
             id="find-character-input"
             type="text"
             placeholder="Search..."
           />
         </div>
-        <button id="find-character-button"class="search-icon">
+
+        <datalist id="options-characters"></datalist>
+
+        <button id="find-character-button" class="search-icon">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
     </header>
     <main>
+      <div class="modal-container">
+        <div class="modal-header">
+          <h3 id="titulo-modal"></h3>
+          <button id="boton-cierre-modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <p id="parrafo-modal"></p>
+      </div>
+
       <div class="contenedor-principal">
         <div class="contenedor-principal-ls">
           <h1 class="main-title">
