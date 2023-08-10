@@ -201,9 +201,13 @@ p {
     margin-bottom: 5rem;
   }
 
+  .contenedor-principal {
+    margin: 1rem;
+  }
+
   .search-nav {
     margin: 1rem;
-    width: 100%;
+    width: 90%;
     justify-content: space-between;
   }
 
