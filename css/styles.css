@@ -159,16 +159,17 @@ p {
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
-  gap: 1rem;
+  gap: 2rem;
 }
 
-.button a {
+.button-name {
   text-decoration: none;
   color: white;
   font-size: 18px;
   text-align: center;
   padding: 10px 15px;
   border-radius: 18px;
+  cursor: pointer;
 }
 
 .button :hover {
@@ -176,6 +177,81 @@ p {
   color: black;
   border-radius: 18px;
 }
+
+/* Characters page */
+
+select {
+  text-align: center;
+  padding: 5px 15px;
+  color: rgb(24, 16, 64);
+  background-color: white;
+  border-radius: 18px;
+  font-family: "Poppins";
+  font-size: 16px;
+  width: 150px;
+  cursor: pointer;
+}
+
+.main-characters-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.characters-container {
+  display: flex;
+  height: 700px;
+  width: 100%;
+  margin: 5rem;
+  border-radius: 18px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgb(24, 16, 64);
+}
+
+.filters {
+  width: 15%;
+  height: 100%;
+  border-bottom-left-radius: 18px;
+  border-top-left-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.filters-selects {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.filter-button {
+  text-align: center;
+  padding: 10px 15px;
+  color: rgb(24, 16, 64);
+  background-color: white;
+  border-radius: 18px;
+  font-family: "Poppins";
+  font-size: 16px;
+  width: 150px;
+  cursor: pointer;
+  margin-top: 5rem;
+}
+
+.filter-button button {
+  background-color: white;
+}
+
+.characters-info {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  border-bottom-right-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+/* Media queries */
 
 @media screen and (max-width: 1550px) {
   .contenedor-principal {

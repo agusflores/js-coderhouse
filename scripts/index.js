@@ -8,6 +8,10 @@ import {
 const findCharacterButton = document.querySelector("#find-character-button");
 const optionsCharacters = document.querySelector("#options-characters");
 
+const buttonCharacters = document.querySelector("#button-characters");
+const buttonEpisodes = document.querySelector("#button-episodes");
+const buttonLocations = document.querySelector("#button-locations");
+
 export const modalContainer = document.querySelector(".modal-container");
 export const closeModal = document.querySelector("#boton-cierre-modal");
 export const parrafoModal = document.querySelector("#parrafo-modal");
@@ -38,4 +42,16 @@ document.addEventListener("DOMContentLoaded", () => {
     option.value = p.name;
     optionsCharacters.appendChild(option);
   });
+});
+
+buttonCharacters.addEventListener("click", () => {
+  window.location.href = "pages/characters.html";
+});
+
+buttonEpisodes.addEventListener("click", () => {
+  window.location.href = "pages/episodes.html";
+});
+
+buttonLocations.addEventListener("click", () => {
+  window.location.href = "pages/locations.html";
 });
