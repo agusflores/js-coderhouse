@@ -22,6 +22,6 @@ timeline
     title JavaScript Coderhouse
     Primera entrega 06/07/2023 : Algoritmo con condicional : Algoritmo con bucle : Simulador interactivo
     Segunda entrega 25/07/2023 : Objetos : Arrays : Metodos de busqueda y filtrado 
-    Tercera entrega 08/08/2023 : Otro : Otro
+    Tercera entrega 08/08/2023 : JSON y Storage : DOM y Eventos
     Entrega final 22/08/2023   : Otro : Otro
 ```
