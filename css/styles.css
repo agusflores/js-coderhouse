@@ -269,12 +269,34 @@ select {
   .contenedor-principal-rs {
     display: none;
   }
+
+  .filters {
+    width: 20%;
+  }
+
+  select,
+  .filter-button {
+    width: 120px;
+  }
 }
 @media screen and (max-width: 780px) {
   header {
     flex-direction: column;
     gap: 2rem;
     margin-bottom: 5rem;
+  }
+
+  .characters-container {
+    margin: 1rem;
+  }
+
+  .filters {
+    width: 40%;
+  }
+
+  select,
+  .filter-button {
+    width: 100px;
   }
 
   .contenedor-principal {
