@@ -99,13 +99,13 @@ input:focus {
 }
 
 .search-icon {
-  background-color: rgb(24, 16, 64);
   width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
-  color: #fdfeff;
+  color: rgb(24, 16, 64);
+  background-color: white;
   border-radius: 38px;
   margin-right: 1rem;
   cursor: pointer;
@@ -176,10 +176,15 @@ p {
   cursor: pointer;
 }
 
-.button :hover {
+.button-name {
+  text-decoration: none;
+  color: rgb(24, 16, 64);
   background-color: white;
-  color: black;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px 15px;
   border-radius: 18px;
+  cursor: pointer;
 }
 
 /* Characters section */
