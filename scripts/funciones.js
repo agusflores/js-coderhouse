@@ -31,7 +31,7 @@ export const validarExistenciaPersonaje = () => {
   if (nombrePersonajeABuscar != undefined && nombrePersonajeABuscar != "") {
     const personajeRetornado = buscarPersonaje(nombrePersonajeABuscar);
     if (personajeRetornado !== undefined) {
-      sessionStorage.setItem(
+      localStorage.setItem(
         "personajeBuscado",
         JSON.stringify(personajeRetornado)
       );
@@ -60,7 +60,7 @@ export const mostrarPopUp = (seEncontro) => {
     tituloModal.textContent = `Personaje no encontrado!`;
     parrafoModal.textContent = `No existe el personaje con nombre '${nombreBuscado}.'`;
   } else {
-    const personaje = JSON.parse(sessionStorage.getItem("personajeBuscado"));
+    const personaje = JSON.parse(localStorage.getItem("personajeBuscado"));
     tituloModal.textContent = `Personaje encontrado!`;
     parrafoModal.textContent = `Status: ${personaje.status}. Specie: ${personaje.species}. Gender: ${personaje.gender}. Origin: ${personaje.origin}.`;
     modalContainer.classList.add("success");
