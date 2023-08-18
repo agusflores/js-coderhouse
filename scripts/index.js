@@ -7,7 +7,6 @@ import {
 
 const findCharacterButton = document.querySelector("#find-character-button");
 const optionsCharacters = document.querySelector("#options-characters");
-
 const buttonCharacters = document.querySelector("#button-characters");
 
 export const modalContainer = document.querySelector(".modal-container");
@@ -43,5 +42,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 buttonCharacters.addEventListener("click", () => {
-  window.location.href = "#characters";
+  window.location.href = "../pages/characters.html";
 });
