@@ -1,11 +1,28 @@
 # Proyecto Final JavaScript Coderhouse
 
 ### 👉 Content
-> Se creo una pagina interactiva con tematica de Rick y Morty.
+> Se creo un sitio web interactivo con tematica de Rick y Morty.
 > 
-> Esta consta en consumir una API publica sobre la serie mencionada 
+> Este sitio web llamado 'Rick and Morty APP' cuenta con las siguientes funcionalidades
 > 
->En proceso...
+> Buscador de personajes:
+> * Popup con mensaje de error en caso que no haya ingresado algun valor en el input.
+> 
+> * Popup con mensaje de error en caso que el personaje no exista.
+> 
+> * Redireccion a pagina con caracteristicas del personaje en caso de que este si exista.
+>
+> Contenedor de personajes:
+> Al seleccionar el boton de 'Ver personajes' se direcciona a la pagina 'characters.html' la cual consume el siguiente endpoint de la API de Rick y Morty:
+> * https://rickandmortyapi.com/api/character
+>
+> Esta cuenta con un paginado que divide 20 personajes por pagina con un total de 42 paginas totales.
+>
+> Filtrado de personajes:
+> En la misma pagina donde se consume el endpoint de personajes esta la opcion de filtrar por algunas caracteristicas del personaje y en el contenedor de los mismos
+> se mostrara la informacion segun los filtros seleccionados a la hora de hacer 'click' en el boton de 'Filtrar'
+>
+> En proceso...
 
 ### 🛠 Built With
 
