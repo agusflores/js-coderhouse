@@ -282,6 +282,15 @@ select {
   overflow-y: scroll;
 }
 
+.card ::-webkit-scrollbar {
+  width: 7px;
+}
+
+.card ::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #171616;
+}
+
 .card-character {
   display: flex;
   flex-direction: column;
@@ -401,6 +410,15 @@ select {
     font-size: 20px;
     height: 400px;
     overflow-y: scroll;
+  }
+
+  .contenedor-principal-ls p ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  .contenedor-principal-ls p ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #171616;
   }
 
   .buttons {
