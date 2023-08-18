@@ -1,4 +1,4 @@
-# Proyecto Final JavaScript Coderhouse
+# Rick and Morty APP
 
 ### 👉 Content
 > Se creo un sitio web interactivo con tematica de Rick y Morty.
