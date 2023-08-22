@@ -13,23 +13,6 @@ let templateHTML;
 let btnNext;
 let btnPrev;
 
-const characters = [];
-
-// export const getAllCharacters = async (url) => {
-//   const response = await fetch(url);
-//   const data = await response.json();
-
-//   for (let index of data["results"]) {
-//     characters.push(index);
-//   }
-//   const existeOtraPage = data.info.next != null;
-//   if (existeOtraPage === false) {
-//     return;
-//   } else {
-//     return getAllCharacters(data.info.next);
-//   }
-// };
-
 const getCharactersAndData = async (url) => {
   const response = await fetch(url);
   const data = await response.json();

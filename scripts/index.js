@@ -1,5 +1,6 @@
-import personajes from "./mock-data.js";
 import { validarExistenciaPersonaje, mostrarPopUp } from "./funciones.js";
+
+export const API_URL = "https://rickandmortyapi.com/api/character";
 
 const findCharacterButton = document.querySelector("#find-character-button");
 const optionsCharacters = document.querySelector("#options-characters");
@@ -29,11 +30,34 @@ findCharacterInput.addEventListener("keydown", (event) => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  personajes.forEach((p) => {
+let characters = [];
+
+export const getCharactersByName = async (url) => {
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+};
+
+const createOptions = async (characters) => {
+  characters.forEach((c) => {
     let option = document.createElement("option");
-    option.value = p.name;
+    option.value = c.name;
     optionsCharacters.appendChild(option);
+  });
+};
+
+const clearOptions = () => {
+  while (optionsCharacters.firstChild) {
+    optionsCharacters.removeChild(optionsCharacters.firstChild);
+  }
+};
+
+findCharacterInput.addEventListener("input", async (e) => {
+  const FIND_BY_NAME_URL = `${API_URL}/?name=${e.target.value}`;
+  getCharactersByName(FIND_BY_NAME_URL).then((data) => {
+    characters = data.results;
+    clearOptions();
+    createOptions(characters);
   });
 });
 
