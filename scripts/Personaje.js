@@ -1,4 +1,6 @@
 class Personaje {
+  consttructor() {}
+
   constructor(id, name, status, species, gender, origin, location, image) {
     this.id = id;
     this.name = name;

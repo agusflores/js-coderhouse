@@ -1,9 +1,5 @@
 import personajes from "./mock-data.js";
-import {
-  obtenerPersonajesFiltradosPorGenero,
-  validarExistenciaPersonaje,
-  mostrarPopUp,
-} from "./funciones.js";
+import { validarExistenciaPersonaje, mostrarPopUp } from "./funciones.js";
 
 const findCharacterButton = document.querySelector("#find-character-button");
 const optionsCharacters = document.querySelector("#options-characters");
