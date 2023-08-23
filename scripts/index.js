@@ -1,4 +1,4 @@
-import { validarExistenciaPersonaje, mostrarPopUp } from "./funciones.js";
+import { validarExistenciaPersonaje } from "./funciones.js";
 
 export const API_URL = "https://rickandmortyapi.com/api/character";
 
@@ -19,14 +19,14 @@ closeModal.addEventListener("click", () => {
 });
 
 findCharacterButton.addEventListener("click", () => {
-  let seEncontroPersonaje = validarExistenciaPersonaje();
-  mostrarPopUp(seEncontroPersonaje);
+  let value = findCharacterInput.value;
+  validarExistenciaPersonaje(value);
 });
 
 findCharacterInput.addEventListener("keydown", (event) => {
+  let value = findCharacterInput.value;
   if (event.key === "Enter") {
-    let seEncontroPersonaje = validarExistenciaPersonaje();
-    mostrarPopUp(seEncontroPersonaje);
+    validarExistenciaPersonaje(value);
   }
 });
 
@@ -39,11 +39,13 @@ export const getCharactersByName = async (url) => {
 };
 
 const createOptions = async (characters) => {
-  characters.forEach((c) => {
-    let option = document.createElement("option");
-    option.value = c.name;
-    optionsCharacters.appendChild(option);
-  });
+  if (characters != null && characters.length > 0) {
+    characters.forEach((c) => {
+      let option = document.createElement("option");
+      option.value = c.name;
+      optionsCharacters.appendChild(option);
+    });
+  }
 };
 
 const clearOptions = () => {

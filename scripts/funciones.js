@@ -4,31 +4,44 @@ import {
   modalContainer,
   parrafoModal,
   tituloModal,
+  API_URL,
+  getCharactersByName,
 } from "./index.js";
-import personajes from "./mock-data.js";
 
-export const buscarPersonaje = (nombrePersonaje) => {
-  return personajes.find(
-    (personaje) => personaje.name.toLowerCase() == nombrePersonaje.toLowerCase()
-  );
+export const buscarPersonaje = async (nombrePersonajeABuscar) => {
+  const FIND_BY_NAME_URL = `${API_URL}/?name=${nombrePersonajeABuscar}`;
+  let characters = [];
+  await getCharactersByName(FIND_BY_NAME_URL).then((data) => {
+    characters = data.results;
+  });
+
+  if (characters != undefined && characters.length > 0) {
+    return characters.find(
+      (personaje) =>
+        personaje.name.toLowerCase() == nombrePersonajeABuscar.toLowerCase()
+    );
+  }
 };
 
-export const validarExistenciaPersonaje = () => {
+export const validarExistenciaPersonaje = async (value) => {
   let seEncontro;
-  const nombrePersonajeABuscar = findCharacterInput.value;
-  if (nombrePersonajeABuscar != undefined && nombrePersonajeABuscar != "") {
-    const personajeRetornado = buscarPersonaje(nombrePersonajeABuscar);
+  if (value != undefined && value != "") {
+    const personajeRetornado = await buscarPersonaje(value);
     if (personajeRetornado !== undefined) {
+      localStorage.setItem(
+        "personajeABuscar",
+        JSON.stringify(personajeRetornado)
+      );
       window.location.href = "../pages/character.html";
       seEncontro = true;
     } else {
       seEncontro = false;
     }
   }
-  return seEncontro;
+  mostrarPopUp(seEncontro);
 };
 
-export const mostrarPopUp = (seEncontro) => {
+const mostrarPopUp = (seEncontro) => {
   modalContainer.classList.remove("success");
   closeModal.classList.remove("success");
   modalContainer.classList.add("error");
