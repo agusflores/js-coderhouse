@@ -1,4 +1,4 @@
-import { validarExistenciaPersonaje } from "./funciones.js";
+import { validarExistenciaPersonaje } from "./functions.js";
 
 export const API_URL = "https://rickandmortyapi.com/api/character";
 

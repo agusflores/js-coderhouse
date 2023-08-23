@@ -7,23 +7,26 @@ const buttonBackCharacters = document.querySelector(
 let character;
 document.addEventListener("DOMContentLoaded", async () => {
   character = JSON.parse(localStorage.getItem("personajeABuscar"));
+  console.log(character);
   completeImageCharacter(character);
   completeInformationCharacter(character);
 });
 
 const completeImageCharacter = (character) => {
-  characterImage.innerHTML = `<img class="selected-character-image" src=${character.image} alt=${character.name} />`;
+  characterImage.innerHTML = `
+    <h2>${character.name}</h2>
+    <img class="selected-character-image" src=${character.image} alt=${character.name} />
+  `;
 };
 
 const completeInformationCharacter = (character) => {
   characterInformation.innerHTML = `
-  <h2>${character.name}</h2>
-  <p>Estado: ${character.status}</p>
-  <p>Especie: ${character.species}</p>
-  <p>Genero: ${character.gender}</p>
-  <p>Origen: ${character.origin.name}</p>
-  <p>Ultima ubicación: ${character.location.name}</p>
-  <p>Cantidad de episodios: ${character.episode.length}</p>
+  <p>Status: ${character.status}</p>
+  <p>Species: ${character.species}</p>
+  <p>Gender: ${character.gender}</p>
+  <p>Origin: ${character.origin.name}</p>
+  <p>Last location: Name: ${character.location.name}</p>
+  <p>Amount of episodes: ${character.episode.length}</p>
   `;
 };
 

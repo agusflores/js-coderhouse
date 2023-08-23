@@ -3,7 +3,8 @@ export const API_URL = "https://rickandmortyapi.com/api/character";
 const cardCharacter = document.querySelector(".card");
 const buttons = document.querySelector(".buttons-paginado");
 const buttonBackHome = document.querySelector(".button-back-home-element");
-const buttonFilter = document.querySelector(".filter-button");
+const buttonFilter = document.querySelector("#filter-button");
+const buttonRemoveFilters = document.querySelector("#remove-filters-button");
 const card = document.querySelector(".card");
 const filterStatus = document.querySelector("#filter-status");
 const filterGender = document.querySelector("#filter-gender");
@@ -52,6 +53,13 @@ buttonFilter.addEventListener("click", () => {
 
   const FILTER_URL = `${API_URL}?gender=${gender}&status=${status}&species=${species}`;
   getCharactersAndData(FILTER_URL);
+});
+
+buttonRemoveFilters.addEventListener("click", () => {
+  filterGender.selectedIndex = 0;
+  filterStatus.selectedIndex = 0;
+  filterSpecies.selectedIndex = 0;
+  getCharactersAndData(API_URL);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
