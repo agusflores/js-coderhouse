@@ -8,6 +8,8 @@ import {
   getCharactersByName,
 } from "./index.js";
 
+import { Personaje } from "./character-class.js";
+
 export const buscarPersonaje = async (nombrePersonajeABuscar) => {
   const FIND_BY_NAME_URL = `${API_URL}/?name=${nombrePersonajeABuscar}`;
   let characters = [];
@@ -26,11 +28,29 @@ export const buscarPersonaje = async (nombrePersonajeABuscar) => {
 export const validarExistenciaPersonaje = async (value) => {
   let seEncontro;
   if (value != undefined && value != "") {
-    const personajeRetornado = await buscarPersonaje(value);
-    if (personajeRetornado !== undefined) {
+    const personaje = await buscarPersonaje(value);
+    if (personaje !== undefined) {
+      const locationOrigin = await getLocation(personaje.origin.url);
+      const location = await getLocation(personaje.location.url);
+      const personajeAGuardar = new Personaje(
+        personaje.id,
+        personaje.name,
+        personaje.gender,
+        personaje.image,
+        personaje.species,
+        personaje.status,
+        locationOrigin.name,
+        locationOrigin.type,
+        locationOrigin.dimension,
+        location.name,
+        location.type,
+        location.dimension,
+        personaje.episode.length
+      );
+
       localStorage.setItem(
         "personajeABuscar",
-        JSON.stringify(personajeRetornado)
+        JSON.stringify(personajeAGuardar)
       );
       window.location.href = "../pages/character.html";
       seEncontro = true;
@@ -61,4 +81,10 @@ const mostrarPopUp = (seEncontro) => {
     modalContainer.classList.remove("show");
     closeModal.classList.remove("error");
   }
+};
+
+const getLocation = async (url) => {
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
 };

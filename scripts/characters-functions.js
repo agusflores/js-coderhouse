@@ -1,3 +1,5 @@
+import { Personaje } from "./character-class.js";
+
 export const API_URL = "https://rickandmortyapi.com/api/character";
 
 const cardCharacter = document.querySelector(".card");
@@ -81,7 +83,32 @@ card.addEventListener("click", async (e) => {
   let id = e.target.id;
   if (id) {
     const personaje = await getCharacter(id);
-    localStorage.setItem("personajeABuscar", JSON.stringify(personaje));
+    const locationOrigin = await getLocation(personaje.origin.url);
+    const location = await getLocation(personaje.location.url);
+
+    const personajeAGuardar = new Personaje(
+      personaje.id,
+      personaje.name,
+      personaje.gender,
+      personaje.image,
+      personaje.species,
+      personaje.status,
+      locationOrigin.name,
+      locationOrigin.type,
+      locationOrigin.dimension,
+      location.name,
+      location.type,
+      location.dimension,
+      personaje.episode.length
+    );
+
+    localStorage.setItem("personajeABuscar", JSON.stringify(personajeAGuardar));
     window.location.href = "../pages/character.html";
   }
 });
+
+const getLocation = async (url) => {
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+};

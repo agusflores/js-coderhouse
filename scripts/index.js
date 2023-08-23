@@ -66,3 +66,5 @@ findCharacterInput.addEventListener("input", async (e) => {
 buttonCharacters.addEventListener("click", () => {
   window.location.href = "../pages/characters.html";
 });
+
+

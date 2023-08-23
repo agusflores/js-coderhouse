@@ -1,19 +1,33 @@
-class Personaje {
+export class Personaje {
   consttructor() {}
 
-  constructor(id, name, status, species, gender, origin, location, image) {
+  constructor(
+    id,
+    name,
+    gender,
+    image,
+    species,
+    status,
+    originName,
+    originType,
+    originDimension,
+    locationName,
+    locationType,
+    locationDimension,
+    amountOfEpisodes
+  ) {
     this.id = id;
     this.name = name;
-    this.status = status;
-    this.species = species;
     this.gender = gender;
-    this.origin = origin;
-    this.location = location;
     this.image = image;
+    this.species = species;
+    this.status = status;
+    this.originName = originName;
+    this.originType = originType;
+    this.originDimension = originDimension;
+    this.locationName = locationName;
+    this.locationType = locationType;
+    this.locationDimension = locationDimension;
+    this.amountOfEpisodes = amountOfEpisodes;
   }
 }
-Personaje.prototype.toString = function () {
-  return `Nombre: ${this.name}, Estado: ${this.status}, Especie: ${this.species}, Genero: ${this.gender}, Origen: ${this.origin}`;
-};
-
-export default Personaje;
