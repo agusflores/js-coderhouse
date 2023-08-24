@@ -22,6 +22,10 @@
 > En la misma pagina donde se consume el endpoint de personajes esta la opcion de filtrar por algunas caracteristicas del personaje y en el contenedor de los mismos
 > se mostrara la informacion segun los filtros seleccionados a la hora de hacer 'click' en el boton de 'Filtrar'
 >
+> Tambien, se desarrollo el boton de 'Remove filters' para eliminar los filtros y volver a obtener la lista completa de personajes
+>
+> Al presionar 'click' en un personaje se redirige a la pagina con las caracteristicas del mismo, funcionando de igual forma que a la hora de buscar un personaje con el buscador del 'index.html'.
+> 
 > En proceso...
 
 ### 🛠 Built With
@@ -40,5 +44,5 @@ timeline
     Primera entrega 06/07/2023 : Algoritmo con condicional : Algoritmo con bucle : Simulador interactivo
     Segunda entrega 25/07/2023 : Objetos : Arrays : Metodos de busqueda y filtrado 
     Tercera entrega 08/08/2023 : JSON y Storage : DOM y Eventos
-    Entrega final 22/08/2023   : Otro : Otro
+    Entrega final 22/08/2023   : Proyecto Final terminado
 ```
