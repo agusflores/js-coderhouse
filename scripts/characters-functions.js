@@ -8,9 +8,6 @@ const buttonBackHome = document.querySelector(".button-back-home-element");
 const buttonFilter = document.querySelector("#filter-button");
 const buttonRemoveFilters = document.querySelector("#remove-filters-button");
 
-const buttonNext = document.querySelector("#button-next");
-const buttonPrev = document.querySelector("#button-prev");
-
 const card = document.querySelector(".card");
 const filterStatus = document.querySelector("#filter-status");
 const filterGender = document.querySelector("#filter-gender");
