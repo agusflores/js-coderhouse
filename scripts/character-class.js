@@ -9,8 +9,6 @@ export class Personaje {
     species,
     status,
     originName,
-    originType,
-    originDimension,
     locationName,
     locationType,
     locationDimension,
@@ -23,8 +21,6 @@ export class Personaje {
     this.species = species;
     this.status = status;
     this.originName = originName;
-    this.originType = originType;
-    this.originDimension = originDimension;
     this.locationName = locationName;
     this.locationType = locationType;
     this.locationDimension = locationDimension;

@@ -7,6 +7,10 @@ const buttons = document.querySelector(".buttons-paginado");
 const buttonBackHome = document.querySelector(".button-back-home-element");
 const buttonFilter = document.querySelector("#filter-button");
 const buttonRemoveFilters = document.querySelector("#remove-filters-button");
+
+const buttonNext = document.querySelector("#button-next");
+const buttonPrev = document.querySelector("#button-prev");
+
 const card = document.querySelector(".card");
 const filterStatus = document.querySelector("#filter-status");
 const filterGender = document.querySelector("#filter-gender");
@@ -20,12 +24,8 @@ const getCharactersAndData = async (url) => {
   const response = await fetch(url);
   const data = await response.json();
   getDataCharacters(data.results);
-  btnNext = data.info.next
-    ? `<button class="button-paginado" data-url=${data.info.next}><i class="fa-solid fa-circle-right"></i></button>`
-    : "";
-  btnPrev = data.info.prev
-    ? `<button class="button-paginado" data-url=${data.info.prev}><i class="fa-solid fa-circle-left"></i></button>`
-    : "";
+  btnNext = `<button id="button-next" class="button-paginado" data-url=${data.info.next}>Next</button>`;
+  btnPrev = `<button id="button-prev" class="button-paginado" data-url=${data.info.prev}>Prev</button>`;
   buttons.innerHTML = btnPrev + " " + btnNext;
 };
 
@@ -48,7 +48,7 @@ const getDataCharacters = async (data) => {
   }
 };
 
-buttonFilter.addEventListener("click", () => {
+buttonFilter.addEventListener("click", async () => {
   const gender = filterGender.value;
   const status = filterStatus.value;
   const species = filterSpecies.value;
@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 buttons.addEventListener("click", (e) => {
+  console.log(e);
   if (e.target.classList.contains("button-paginado")) {
     let value = e.target.dataset.url;
     getCharactersAndData(value);
@@ -83,9 +84,7 @@ card.addEventListener("click", async (e) => {
   let id = e.target.id;
   if (id) {
     const personaje = await getCharacter(id);
-    const locationOrigin = await getLocation(personaje.origin.url);
     const location = await getLocation(personaje.location.url);
-
     const personajeAGuardar = new Personaje(
       personaje.id,
       personaje.name,
@@ -93,9 +92,7 @@ card.addEventListener("click", async (e) => {
       personaje.image,
       personaje.species,
       personaje.status,
-      locationOrigin.name,
-      locationOrigin.type,
-      locationOrigin.dimension,
+      personaje.origin.name,
       location.name,
       location.type,
       location.dimension,

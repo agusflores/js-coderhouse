@@ -30,7 +30,6 @@ export const validarExistenciaPersonaje = async (value) => {
   if (value != undefined && value != "") {
     const personaje = await buscarPersonaje(value);
     if (personaje !== undefined) {
-      const locationOrigin = await getLocation(personaje.origin.url);
       const location = await getLocation(personaje.location.url);
       const personajeAGuardar = new Personaje(
         personaje.id,
@@ -39,9 +38,7 @@ export const validarExistenciaPersonaje = async (value) => {
         personaje.image,
         personaje.species,
         personaje.status,
-        locationOrigin.name,
-        locationOrigin.type,
-        locationOrigin.dimension,
+        personaje.origin.name,
         location.name,
         location.type,
         location.dimension,

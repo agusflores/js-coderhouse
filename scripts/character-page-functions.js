@@ -24,7 +24,7 @@ const completeInformationCharacter = (character) => {
   <p>Status: ${character.status}</p>
   <p>Species: ${character.species}</p>
   <p>Gender: ${character.gender}</p>
-  <p>Origin: Name: ${character.originName}, Type:${character.originType}, Dimension: ${character.originDimension}</p>
+  <p>Origin: ${character.originName}</p>
   <p>Last location: Name: ${character.locationName}, Type:${character.locationType}, Dimension: ${character.locationDimension}</p>
   <p>Amount of episodes: ${character.amountOfEpisodes}</p>
   `;
