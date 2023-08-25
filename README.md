@@ -26,7 +26,7 @@
 >
 > Al presionar 'click' en un personaje se redirige a la pagina con las caracteristicas del mismo, funcionando de igual forma que a la hora de buscar un personaje con el buscador del 'index.html'.
 >
-> NO es responsive.
+> NO esta desarrollado el responsive.
 > 
 > En proceso...
 
