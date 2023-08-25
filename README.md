@@ -25,6 +25,8 @@
 > Tambien, se desarrollo el boton de 'Remove filters' para eliminar los filtros y volver a obtener la lista completa de personajes
 >
 > Al presionar 'click' en un personaje se redirige a la pagina con las caracteristicas del mismo, funcionando de igual forma que a la hora de buscar un personaje con el buscador del 'index.html'.
+>
+> NO es responsive.
 > 
 > En proceso...
 
